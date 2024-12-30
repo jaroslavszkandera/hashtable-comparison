@@ -1,10 +1,8 @@
 package testdata
 
 import (
-	"fmt"
 	"math/rand"
 	"strings"
-	"time"
 )
 
 func generateRandomString(minLength, maxLength int) string {
@@ -22,11 +20,9 @@ func generateRandomString(minLength, maxLength int) string {
 }
 
 func GenerateTestData(numValues int) []string {
-	start := time.Now()
 	testData := make([]string, numValues)
 	for i := 0; i < numValues; i++ {
 		testData[i] = generateRandomString(10, 100)
 	}
-	fmt.Println("Test elems generated in", time.Since(start))
 	return testData
 }
